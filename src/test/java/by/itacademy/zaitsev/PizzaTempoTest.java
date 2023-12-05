@@ -1,3 +1,5 @@
+package by.itacademy.zaitsev;
+
 import by.itacademy.zaitsev.PizzaTempoPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
