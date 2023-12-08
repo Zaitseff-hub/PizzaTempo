@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>by.itacademy.zaitsev</groupId>
-    <artifactId>PizzaTempo</artifactId>
+    <artifactId>TempoTerraPizza</artifactId>
     <version>1.0.1</version>
 
     <properties>

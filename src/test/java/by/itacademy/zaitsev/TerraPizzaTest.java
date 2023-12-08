@@ -2,24 +2,20 @@ package by.itacademy.zaitsev;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TerraPizzaTest {
+public class TerraPizzaTest extends BaseTest{
 
     @Test
     public void testWithFunctionalTerraPizza() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://terrapizza.by/");
-
+        driver.get("https://www.terrapizza.by");
         TerraPizzaPage pizza = new TerraPizzaPage(driver);
-
         pizza.clickCloseButtonCookies();
         Thread.sleep(4000);
         pizza.clickButtonMenu();
         pizza.clickPizzaSection();
+        Thread.sleep(2000);
+        pizza.clickCloseButtonCookies();
         pizza.clickButtonOderPizza();
         pizza.clickButtonBarSection();
         pizza.clickButtonOderDrink();
@@ -27,7 +23,6 @@ public class TerraPizzaTest {
         Assertions.assertEquals("Пицца Венеция на тонком 32 см", pizza.getOderVerificationPizza());
         Assertions.assertEquals("Облепиховый чай", pizza.getOderVerificationDrink());
         Thread.sleep(2000);
-        driver.quit();
-    }
 
+    }
 }
