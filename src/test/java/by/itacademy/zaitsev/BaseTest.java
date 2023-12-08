@@ -9,7 +9,7 @@ public class BaseTest {
     WebDriver driver;
 
     @BeforeEach
-    public void loadingWebSite() {
+    public void baseStart() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }

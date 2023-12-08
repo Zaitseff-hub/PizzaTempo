@@ -3,12 +3,8 @@ package by.itacademy.zaitsev;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PizzaTempoTest extends BaseTest {
-
-    WebDriver driver = new ChromeDriver();
     @BeforeEach
     public void loadingWebSite() {
         driver.get("https://www.pizzatempo.by/");
@@ -30,13 +26,13 @@ public class PizzaTempoTest extends BaseTest {
 
     @Test
     public void testWithOrderDrink() throws InterruptedException {
-        PizzaTempoPage pizza = new PizzaTempoPage(driver);
-        pizza.clickButtonSectionDrinks();
-        pizza.clickButtonOrderDrink();
+        PizzaTempoPage drink = new PizzaTempoPage(driver);
+        drink.clickButtonSectionDrinks();
+        drink.clickButtonOrderDrink();
         Thread.sleep(4000);
-        pizza.clickButtonBucket();
+        drink.clickButtonBucket();
         Thread.sleep(2000);
-        Assertions.assertEquals("Вода мин. Бонаква среднегазированая 1л", pizza.getOrderVerificationDrink());
+        Assertions.assertEquals("Вода мин. Бонаква среднегазированая 1л", drink.getOrderVerificationDrink());
         Thread.sleep(2000);
     }
 }

@@ -19,7 +19,7 @@ public class PizzaTempoPage {
     public void clickButtonOrder() {driver.findElement(By.xpath(buttonOrderLocator)).click();}
     public void clickButtonConfirmOrder() {driver.findElement(By.xpath(buttonConfirmOrderLocator)).click();}
     public void clickButtonBucket() {driver.findElement(By.xpath(buttonBucketLocator)).click();}
-    public String getOrderVerification() {return driver.findElement(By.xpath(orderVerificationLocator)).getText();};
+    public String getOrderVerification() {return driver.findElement(By.xpath(orderVerificationLocator)).getText();}
     public void clickButtonSectionDrinks() {driver.findElement(By.xpath(buttonSectionDrinks)).click();}
     public void clickButtonOrderDrink() {driver.findElement(By.xpath(buttonOrderDrinkLocator)).click();}
     public String getOrderVerificationDrink() {return driver.findElement(By.xpath(orderVerificationDrinkLocator)).getText();}
